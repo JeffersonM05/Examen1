@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styless.css">
+    <title>Perfil</title>
+</head>
+
+<body>
+    <header>
+      
+        <div id="toggle" onclick="toggle()"></div>
+
+        <ul class="breadcrumb">
+            <li><a href="index.html">Inicio</a></li>
+            <li>Perfil</li>
+            <li><a href="formulario.html">Contacto</a></li>
+          </ul>
+    </header>
+  <section class="banner" id="sec">
+    
+    <h1 class="title">Contenido del perfil</h1></br>
+    
+    <div class="container">
+       
+        <div class="card">
+            <img src="content/images/Image.jpg">
+            <h4>¿Quién soy?</h4>
+            <p>Me considero una persona amable, graciosa, extrovertida y buena persona.</br>
+            Mis pasatiempos son escuchar música, jugar futbol y los videojuegos.</p>
+        </div>
+        
+        <div class="card">
+            <img src="content/images/Nota_tablets.jpg">
+            <h4>Educación</h4>
+            <p>Actualmente estoy sacando bachillerato en ingeniería en informática.</p>
+        </div>
+        
+        <div class="card">
+            <img src="content/images/conocimiento.jpg">
+            <h4>Conocimientos y Experiencia</h4>
+            <p>De conocimientos he aprendido muchos tipos de lenguajes de programación, como: python, c#, php, sql y html.</br>
+            Y he tenido experiancias laborales las cuales me han ayudado muho a fortalecer mis conocimientos.</p>
+        </div>
+    </div>
+
+    <nav id="navigation">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="formulario.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <script type="text/javascript">
+    function toggle(){
+        var seccion = document.getElementById("sec")
+        var nav = document.getElementById("navigation")
+        seccion.classList.toggle('active')
+        nav.classList.toggle('active')
+    }
+    </script>
+    
+    <footer class="footer">
+        <p class="footer__texto">Jefferson Masis A.</br> <span>Correo: jeffmasis24@gmail.com</span></br>
+            <span>Tel: 85009526</span> </p>
+    </footer>
+    
+</body>
+</html>

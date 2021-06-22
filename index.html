@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="banner" id="sec">
+        <header>
+          
+            <div id="toggle" onclick="toggle()"></div>
+            <ul class="breadcrumb">
+                <li>Inicio</li>
+                <li><a href="#">Perfil</a></li>
+                <li><a href="#">Contacto</a></li>
+              </ul>
+        </header>
+        <div class="content">
+            <img src="content/images/mee.jpg">
+            <h2>Hola!, Soy Jefferson Masis</h2>
+            <p>Actualmente estudio ingeniería en informática en la Universidad Florencio del Castillo.</br>
+                Tengo 18 años de edad.</br>
+                Vivo en Cooperrosales, Quircot.
+            </p>
+        </div>
+
+    
+    </section>
+    <nav id="navigation">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="formulario.html">Contacto</a></li>
+        </ul>
+    </nav>
+<script type="text/javascript">
+    function toggle(){
+        var seccion = document.getElementById("sec")
+        var nav = document.getElementById("navigation")
+        seccion.classList.toggle('active')
+        nav.classList.toggle('active')
+    }
+</script>
+
+<footer class="footer">
+    <p class="footer__texto">Jefferson Masis A.</br> <span>Correo: jeffmasis24@gmail.com</span></br>
+        <span>Tel: 85009526</span> </p>
+</footer>
+
+</body>
+</html>

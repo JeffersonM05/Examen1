@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+/* Viewport */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px;
+    z-index: 10;
+    transition: 0.6s;
+}
+
+
+header #toggle{
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+header > #toggle::before{
+    content: '';
+    position: absolute;
+    top: 7px;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+
+    /* Top = arriba
+        left = izq
+        right = der
+        bottom=abajo */
+}
+
+
+header > #toggle::after{
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    /* Top = arriba
+        left = izq
+        right = der
+        bottom=abajo */
+}
+header {
+    display: flex;
+    margin: 0;
+    top: 0;
+    justify-content: left;
+    background-color: var(--primario);
+    width: 100%;  
+    z-index: 2;
+	position: fixed;
+    gap: 2rem;
+}
+header .logo {
+    justify-content: center;
+    font-size: 4rem;
+    margin-top: 3rem;
+}
+header .site-name {
+    justify-content: right;
+    font-size: 5rem;
+  margin-top: 3rem;
+}
+
+.banner.active header #toggle::before{
+    top: 50%;
+    left: 50%;
+    /* trasnformaciones
+    permiten manipular y transformar elementos */
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+
+.banner.active header #toggle::after{
+    top: 50%;
+    left: 50%;
+    /* trasnformaciones
+    permiten manipular y transformar elementos */
+    transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url(content/images/image3.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.banner .active{
+    transform: translateY(-400px);
+}
+
+#navigation{
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    background: lightskyblue;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+}
+
+#navigation.active{
+    right: 0;
+}
+
+#navigation ul li a{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.content {
+    max-width: 600px;
+    margin-left: 40px;
+}
+
+.content h2{
+    color: white;
+    font-size: 2.5em;
+    
+
+}
+.content p{
+    font-size: 1.2em;
+    color: white;
+    font-weight: 300;
+}
+
+.content a{
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    background: white;
+    color: black;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;    
+}
+
+header ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+    color: rgb(253, 253, 253);
+  }
+
+header ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: rgb(253, 253, 253);
+    content: "/\00a0";
+  }
+  
+header ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+  }
+  
+.content img {
+    height: 400px;
+    width: 275px;
+    margin-bottom: 20px;
+    margin-top: 100px;
+    border-radius: 20px;
+}
+
+.footer {
+    background-color: var(--negro);
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+}
+.footer__texto {
+    color: var(--blanco);
+    font-family: var(--fuentePrincipal);
+    text-align: left;
+    font-size: 1rem;
+}
+.footer__texto span {
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
